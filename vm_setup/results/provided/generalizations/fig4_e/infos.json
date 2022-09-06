@@ -1,0 +1,8 @@
+{
+  "identifier": "Fig4.E",
+  "predictors": [
+    "iaca.hsw",
+    "difftune.artifact.hsw"
+  ],
+  "witness_len": 23
+}

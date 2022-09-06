@@ -1,0 +1,57 @@
+  generalizing BB:    AbstractInsns:
+       0:
+        exact_scheme: vpsubq W:XMM0..15, R:XMM0..15, xmmword ptr R:MEM(128)
+        mnemonic: 'vpsubq' + at most 0 edits
+        opschemes: {R:MEM(128), R:XMM0..15, W:XMM0..15}
+        memory_usage: at least {R, S:128}
+        category: AVX
+        extension: AVX
+        isa-set: AVX
+       1:
+        exact_scheme: fxrstor64 R:MEM(4096)
+        mnemonic: 'fxrstor64' + at most 0 edits
+        opschemes: {R:MEM(4096), W:x87control}
+        memory_usage: at least {R, S:4096}
+        category: SSE
+        extension: SSE
+        isa-set: FXSAVE64
+    Aliasing:
+      0:(E, 'mem0') - 1:(E, 'mem0') : must alias
+      0:(E, 'reg0') - 0:(E, 'reg1') : must not alias
+  evaluating samples for expanding (1, (((0, (E, 'mem0')), (1, (E, 'mem0'))), <SpecialValue.TOP: 1>)) (benefit: 0)
+  samples for expanding (1, (((0, (E, 'mem0')), (1, (E, 'mem0'))), <SpecialValue.TOP: 1>)) are interesting, adjusting BB
+  the chosen expansion (0, 1, ('exact_scheme', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 0, ('exact_scheme', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 1, ('opschemes', 'W:x87control')) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 0, ('isa-set', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 0, ('opschemes', 'R:MEM(128)')) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 1, ('extension', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 1, ('memory_usage', 'R')) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 0, ('extension', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  evaluating samples for expanding (0, 0, ('mnemonic', 1)) (benefit: 4.0)
+  samples for expanding (0, 0, ('mnemonic', 1)) are interesting, adjusting BB
+  the chosen expansion (0, 0, ('category', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 1, ('mnemonic', 1)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 0, ('opschemes', 'R:XMM0..15')) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 0, ('memory_usage', 'R')) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 0, ('memory_usage', 'S:128')) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 1, ('category', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  evaluating samples for expanding (0, 0, ('mnemonic', 2)) (benefit: 2.5)
+  samples for expanding (0, 0, ('mnemonic', 2)) are not interesting, discarding
+  the chosen expansion (0, 1, ('isa-set', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  evaluating samples for expanding (1, (((0, (E, 'reg0')), (0, (E, 'reg1'))), <SpecialValue.TOP: 1>)) (benefit: 0)
+  samples for expanding (1, (((0, (E, 'reg0')), (0, (E, 'reg1'))), <SpecialValue.TOP: 1>)) are interesting, adjusting BB
+  the chosen expansion (0, 1, ('opschemes', 'R:MEM(4096)')) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  evaluating samples for expanding (0, 1, ('mnemonic', 2)) (benefit: 2.0)
+  samples for expanding (0, 1, ('mnemonic', 2)) are interesting, adjusting BB
+  the chosen expansion (0, 1, ('mnemonic', 3)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  evaluating samples for expanding (0, 0, ('memory_usage', <SpecialValue.TOP: 1>)) (benefit: 2.0)
+  samples for expanding (0, 0, ('memory_usage', <SpecialValue.TOP: 1>)) are not interesting, discarding
+  the chosen expansion (0, 1, ('memory_usage', 'S:4096')) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  evaluating samples for expanding (0, 1, ('mnemonic', 4)) (benefit: 1011.0)
+  samples for expanding (0, 1, ('mnemonic', 4)) are not interesting, discarding
+  evaluating samples for expanding (0, 0, ('opschemes', 'W:XMM0..15')) (benefit: 2.25)
+  samples for expanding (0, 0, ('opschemes', 'W:XMM0..15')) are interesting, adjusting BB
+  the chosen expansion (0, 1, ('memory_usage', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  no more component left for expansion
+  generalization done.

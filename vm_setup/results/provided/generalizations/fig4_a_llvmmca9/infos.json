@@ -1,0 +1,8 @@
+{
+  "identifier": "Fig4.A.llvmmca9",
+  "predictors": [
+    "llvm-mca.13-r+a.hsw",
+    "llvm-mca.9-r+a.hsw"
+  ],
+  "witness_len": 25
+}

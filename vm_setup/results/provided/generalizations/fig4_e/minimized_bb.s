@@ -1,0 +1,1 @@
+sar qword ptr [rsi + 0x40], 0x42

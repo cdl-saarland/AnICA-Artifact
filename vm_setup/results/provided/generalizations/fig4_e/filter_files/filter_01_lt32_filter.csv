@@ -1,0 +1,782 @@
+vpextrb byte ptr W:MEM(8), R:XMM0..15, IMM(8)
+vpextrw word ptr W:MEM(16), R:XMM0..15, IMM(8)
+vpinsrb W:XMM0..15, R:XMM0..15, byte ptr R:MEM(8), IMM(8)
+vpinsrw W:XMM0..15, R:XMM0..15, word ptr R:MEM(16), IMM(8)
+vpmovsxbq W:XMM0..15, word ptr R:MEM(16)
+vpmovzxbq W:XMM0..15, word ptr R:MEM(16)
+vpbroadcastb W:XMM0..15, byte ptr R:MEM(8)
+vpbroadcastb W:YMM0..15, byte ptr R:MEM(8)
+vpbroadcastw W:XMM0..15, word ptr R:MEM(16)
+vpbroadcastw W:YMM0..15, word ptr R:MEM(16)
+adc byte ptr RW:MEM(8), 0x0
+adc byte ptr RW:MEM(8), IMM(8)
+adc RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, 0x0
+adc RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, IMM(8)
+adc RW:ah,bh,ch,dh, 0x0
+adc RW:ah,bh,ch,dh, IMM(8)
+adc word ptr RW:MEM(16), IMM(16)
+adc RW:GPR:16, IMM(16)
+adc word ptr RW:MEM(16), 0x0
+adc word ptr RW:MEM(16), IMM(8)
+adc RW:GPR:16, 0x0
+adc RW:GPR:16, IMM(8)
+adc byte ptr RW:MEM(8), R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+adc byte ptr RW:MEM(8), R:ah,bh,ch,dh
+adc RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+adc RW:ah,bh,ch,dh, R:al,bl,cl,dl
+adc RW:al,bl,cl,dl, R:ah,bh,ch,dh
+adc RW:ah,bh,ch,dh, R:ah,bh,ch,dh
+adc word ptr RW:MEM(16), R:GPR:16
+adc RW:GPR:16, R:GPR:16
+adc RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, byte ptr R:MEM(8)
+adc RW:ah,bh,ch,dh, byte ptr R:MEM(8)
+adc RW:GPR:16, word ptr R:MEM(16)
+adc RW:al, 0x0
+adc RW:al, IMM(8)
+adc RW:ax, IMM(16)
+lock adc byte ptr RW:MEM(8), 0x0
+lock adc byte ptr RW:MEM(8), IMM(8)
+lock adc word ptr RW:MEM(16), IMM(16)
+lock adc word ptr RW:MEM(16), 0x0
+lock adc word ptr RW:MEM(16), IMM(8)
+lock adc byte ptr RW:MEM(8), R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+lock adc byte ptr RW:MEM(8), R:ah,bh,ch,dh
+lock adc word ptr RW:MEM(16), R:GPR:16
+add byte ptr RW:MEM(8), 0x0
+add byte ptr RW:MEM(8), IMM(8)
+add RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, 0x0
+add RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, IMM(8)
+add RW:ah,bh,ch,dh, 0x0
+add RW:ah,bh,ch,dh, IMM(8)
+add word ptr RW:MEM(16), IMM(16)
+add RW:GPR:16, IMM(16)
+add word ptr RW:MEM(16), 0x0
+add word ptr RW:MEM(16), IMM(8)
+add RW:GPR:16, 0x0
+add RW:GPR:16, IMM(8)
+add byte ptr RW:MEM(8), R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+add byte ptr RW:MEM(8), R:ah,bh,ch,dh
+add RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+add RW:ah,bh,ch,dh, R:al,bl,cl,dl
+add RW:al,bl,cl,dl, R:ah,bh,ch,dh
+add RW:ah,bh,ch,dh, R:ah,bh,ch,dh
+add word ptr RW:MEM(16), R:GPR:16
+add RW:GPR:16, R:GPR:16
+add RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, byte ptr R:MEM(8)
+add RW:ah,bh,ch,dh, byte ptr R:MEM(8)
+add RW:GPR:16, word ptr R:MEM(16)
+add RW:al, 0x0
+add RW:al, IMM(8)
+add RW:ax, IMM(16)
+lock add byte ptr RW:MEM(8), 0x0
+lock add byte ptr RW:MEM(8), IMM(8)
+lock add word ptr RW:MEM(16), IMM(16)
+lock add word ptr RW:MEM(16), 0x0
+lock add word ptr RW:MEM(16), IMM(8)
+lock add byte ptr RW:MEM(8), R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+lock add byte ptr RW:MEM(8), R:ah,bh,ch,dh
+lock add word ptr RW:MEM(16), R:GPR:16
+and byte ptr RW:MEM(8), 0x0
+and byte ptr RW:MEM(8), IMM(8)
+and RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, 0x0
+and RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, IMM(8)
+and RW:ah,bh,ch,dh, 0x0
+and RW:ah,bh,ch,dh, IMM(8)
+and word ptr RW:MEM(16), IMM(16)
+and RW:GPR:16, IMM(16)
+and word ptr RW:MEM(16), 0x0
+and word ptr RW:MEM(16), IMM(8)
+and RW:GPR:16, 0x0
+and RW:GPR:16, IMM(8)
+and byte ptr RW:MEM(8), R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+and byte ptr RW:MEM(8), R:ah,bh,ch,dh
+and RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+and RW:ah,bh,ch,dh, R:al,bl,cl,dl
+and RW:al,bl,cl,dl, R:ah,bh,ch,dh
+and RW:ah,bh,ch,dh, R:ah,bh,ch,dh
+and word ptr RW:MEM(16), R:GPR:16
+and RW:GPR:16, R:GPR:16
+and RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, byte ptr R:MEM(8)
+and RW:ah,bh,ch,dh, byte ptr R:MEM(8)
+and RW:GPR:16, word ptr R:MEM(16)
+and RW:al, 0x0
+and RW:al, IMM(8)
+and RW:ax, IMM(16)
+lock and byte ptr RW:MEM(8), 0x0
+lock and byte ptr RW:MEM(8), IMM(8)
+lock and word ptr RW:MEM(16), IMM(16)
+lock and word ptr RW:MEM(16), 0x0
+lock and word ptr RW:MEM(16), IMM(8)
+lock and byte ptr RW:MEM(8), R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+lock and byte ptr RW:MEM(8), R:ah,bh,ch,dh
+lock and word ptr RW:MEM(16), R:GPR:16
+bsf W:GPR:16, word ptr R:MEM(16)
+bsf W:GPR:16, R:GPR:16
+bsr W:GPR:16, word ptr R:MEM(16)
+bsr W:GPR:16, R:GPR:16
+bt word ptr R:MEM(16), 0x0
+bt word ptr R:MEM(16), IMM(8)
+bt R:GPR:16, 0x0
+bt R:GPR:16, IMM(8)
+bt word ptr R:MEM(16), R:GPR:16
+bt R:GPR:16, R:GPR:16
+btc word ptr RW:MEM(16), 0x0
+btc word ptr RW:MEM(16), IMM(8)
+btc RW:GPR:16, 0x0
+btc RW:GPR:16, IMM(8)
+btc word ptr RW:MEM(16), R:GPR:16
+btc RW:GPR:16, R:GPR:16
+lock btc word ptr RW:MEM(16), 0x0
+lock btc word ptr RW:MEM(16), IMM(8)
+lock btc word ptr RW:MEM(16), R:GPR:16
+btr word ptr RW:MEM(16), 0x0
+btr word ptr RW:MEM(16), IMM(8)
+btr RW:GPR:16, 0x0
+btr RW:GPR:16, IMM(8)
+btr word ptr RW:MEM(16), R:GPR:16
+btr RW:GPR:16, R:GPR:16
+lock btr word ptr RW:MEM(16), 0x0
+lock btr word ptr RW:MEM(16), IMM(8)
+lock btr word ptr RW:MEM(16), R:GPR:16
+bts word ptr RW:MEM(16), 0x0
+bts word ptr RW:MEM(16), IMM(8)
+bts RW:GPR:16, 0x0
+bts RW:GPR:16, IMM(8)
+bts word ptr RW:MEM(16), R:GPR:16
+bts RW:GPR:16, R:GPR:16
+lock bts word ptr RW:MEM(16), 0x0
+lock bts word ptr RW:MEM(16), IMM(8)
+lock bts word ptr RW:MEM(16), R:GPR:16
+cmovb W:GPR:16, word ptr R:MEM(16)
+cmovb W:GPR:16, R:GPR:16
+cmovbe W:GPR:16, word ptr R:MEM(16)
+cmovbe W:GPR:16, R:GPR:16
+cmovl W:GPR:16, word ptr R:MEM(16)
+cmovl W:GPR:16, R:GPR:16
+cmovle W:GPR:16, word ptr R:MEM(16)
+cmovle W:GPR:16, R:GPR:16
+cmovae W:GPR:16, word ptr R:MEM(16)
+cmovae W:GPR:16, R:GPR:16
+cmova W:GPR:16, word ptr R:MEM(16)
+cmova W:GPR:16, R:GPR:16
+cmovge W:GPR:16, word ptr R:MEM(16)
+cmovge W:GPR:16, R:GPR:16
+cmovg W:GPR:16, word ptr R:MEM(16)
+cmovg W:GPR:16, R:GPR:16
+cmovno W:GPR:16, word ptr R:MEM(16)
+cmovno W:GPR:16, R:GPR:16
+cmovnp W:GPR:16, word ptr R:MEM(16)
+cmovnp W:GPR:16, R:GPR:16
+cmovns W:GPR:16, word ptr R:MEM(16)
+cmovns W:GPR:16, R:GPR:16
+cmovne W:GPR:16, word ptr R:MEM(16)
+cmovne W:GPR:16, R:GPR:16
+cmovo W:GPR:16, word ptr R:MEM(16)
+cmovo W:GPR:16, R:GPR:16
+cmovp W:GPR:16, word ptr R:MEM(16)
+cmovp W:GPR:16, R:GPR:16
+cmovs W:GPR:16, word ptr R:MEM(16)
+cmovs W:GPR:16, R:GPR:16
+cmove W:GPR:16, word ptr R:MEM(16)
+cmove W:GPR:16, R:GPR:16
+cmp byte ptr R:MEM(8), 0x0
+cmp byte ptr R:MEM(8), IMM(8)
+cmp R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, 0x0
+cmp R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, IMM(8)
+cmp R:ah,bh,ch,dh, 0x0
+cmp R:ah,bh,ch,dh, IMM(8)
+cmp word ptr R:MEM(16), IMM(16)
+cmp R:GPR:16, IMM(16)
+cmp word ptr R:MEM(16), 0x0
+cmp word ptr R:MEM(16), IMM(8)
+cmp R:GPR:16, 0x0
+cmp R:GPR:16, IMM(8)
+cmp byte ptr R:MEM(8), R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+cmp byte ptr R:MEM(8), R:ah,bh,ch,dh
+cmp R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+cmp R:ah,bh,ch,dh, R:al,bl,cl,dl
+cmp R:al,bl,cl,dl, R:ah,bh,ch,dh
+cmp R:ah,bh,ch,dh, R:ah,bh,ch,dh
+cmp word ptr R:MEM(16), R:GPR:16
+cmp R:GPR:16, R:GPR:16
+cmp R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, byte ptr R:MEM(8)
+cmp R:ah,bh,ch,dh, byte ptr R:MEM(8)
+cmp R:GPR:16, word ptr R:MEM(16)
+cmp R:al, 0x0
+cmp R:al, IMM(8)
+cmp R:ax, IMM(16)
+cmpsb byte ptr R:[rsi], byte ptr R:es:[rdi]
+cmpsw word ptr R:[rsi], word ptr R:es:[rdi]
+cmpxchg byte ptr RW:MEM(8), R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+cmpxchg byte ptr RW:MEM(8), R:ah,bh,ch,dh
+cmpxchg RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+cmpxchg RW:ah,bh,ch,dh, R:al,bl,cl,dl
+cmpxchg RW:al,bl,cl,dl, R:ah,bh,ch,dh
+cmpxchg RW:ah,bh,ch,dh, R:ah,bh,ch,dh
+cmpxchg word ptr RW:MEM(16), R:GPR:16
+cmpxchg RW:GPR:16, R:GPR:16
+lock cmpxchg byte ptr RW:MEM(8), R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+lock cmpxchg byte ptr RW:MEM(8), R:ah,bh,ch,dh
+lock cmpxchg word ptr RW:MEM(16), R:GPR:16
+dec byte ptr RW:MEM(8)
+dec RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+dec RW:ah,bh,ch,dh
+dec word ptr RW:MEM(16)
+dec RW:GPR:16
+lock dec byte ptr RW:MEM(8)
+lock dec word ptr RW:MEM(16)
+div byte ptr R:MEM(8)
+div R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+div R:ah,bh,ch,dh
+div word ptr R:MEM(16)
+div R:GPR:16
+idiv byte ptr R:MEM(8)
+idiv R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+idiv R:ah,bh,ch,dh
+idiv word ptr R:MEM(16)
+idiv R:GPR:16
+imul byte ptr R:MEM(8)
+imul R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+imul R:ah,bh,ch,dh
+imul word ptr R:MEM(16)
+imul R:GPR:16
+imul W:GPR:16, word ptr R:MEM(16), IMM(16)
+imul W:GPR:16, R:GPR:16, IMM(16)
+imul W:GPR:16, word ptr R:MEM(16), 0x0
+imul W:GPR:16, word ptr R:MEM(16), IMM(8)
+imul W:GPR:16, R:GPR:16, 0x0
+imul W:GPR:16, R:GPR:16, IMM(8)
+imul RW:GPR:16, word ptr R:MEM(16)
+imul RW:GPR:16, R:GPR:16
+in W:al, 0x0
+in W:al, IMM(8)
+in W:ax, 0x0
+in W:ax, IMM(8)
+in W:al, R:dx
+in W:ax, R:dx
+in W:eax, R:dx
+inc byte ptr RW:MEM(8)
+inc RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+inc RW:ah,bh,ch,dh
+inc word ptr RW:MEM(16)
+inc RW:GPR:16
+lock inc byte ptr RW:MEM(8)
+lock inc word ptr RW:MEM(16)
+lea W:GPR:16, MEM(0)
+lea W:GPR:32, MEM(0)
+lea W:GPR:64, MEM(0)
+lodsb W:al, byte ptr R:[rsi]
+lodsw W:ax, word ptr R:[rsi]
+mov byte ptr W:MEM(8), 0x0
+mov byte ptr W:MEM(8), IMM(8)
+mov word ptr W:MEM(16), IMM(16)
+mov W:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+mov W:ah,bh,ch,dh, R:al,bl,cl,dl
+mov W:al,bl,cl,dl, R:ah,bh,ch,dh
+mov W:ah,bh,ch,dh, R:ah,bh,ch,dh
+mov byte ptr W:MEM(8), R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+mov byte ptr W:MEM(8), R:ah,bh,ch,dh
+mov word ptr W:MEM(16), R:GPR:16
+mov W:GPR:16, R:GPR:16
+mov W:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, byte ptr R:MEM(8)
+mov W:ah,bh,ch,dh, byte ptr R:MEM(8)
+mov W:GPR:16, word ptr R:MEM(16)
+mov word ptr W:MEM(16), R:SEGMENT:16
+mov W:GPR:32, R:SEGMENT:16
+mov W:GPR:64, R:SEGMENT:16
+mov W:ds,es,fs,gs,ss, word ptr R:MEM(16)
+mov W:ds,es,fs,gs,ss, R:GPR:16
+mov W:al, byte ptr R:MEM(8)
+mov W:ax, word ptr R:MEM(16)
+mov byte ptr W:MEM(8), R:al
+mov word ptr W:MEM(16), R:ax
+mov W:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, 0x0
+mov W:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, IMM(8)
+mov W:ah,bh,ch,dh, 0x0
+mov W:ah,bh,ch,dh, IMM(8)
+mov W:GPR:16, IMM(16)
+movsb byte ptr W:es:[rdi], byte ptr R:[rsi]
+movsw word ptr W:es:[rdi], word ptr R:[rsi]
+movsx W:GPR:16, byte ptr R:MEM(8)
+movsx W:GPR:32, byte ptr R:MEM(8)
+movsx W:GPR:64, byte ptr R:MEM(8)
+movsx W:GPR:16, R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+movsx W:ax,bp,bx,cx,di,dx,si,sp, R:ah,bh,ch,dh
+movsx W:GPR:32, R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+movsx W:eax,ebp,ebx,ecx,edi,edx,esi,esp, R:ah,bh,ch,dh
+movsx W:GPR:64, R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+movsx W:GPR:32, word ptr R:MEM(16)
+movsx W:GPR:64, word ptr R:MEM(16)
+movsx W:GPR:32, R:GPR:16
+movsx W:GPR:64, R:GPR:16
+movzx W:GPR:16, byte ptr R:MEM(8)
+movzx W:GPR:32, byte ptr R:MEM(8)
+movzx W:GPR:64, byte ptr R:MEM(8)
+movzx W:GPR:16, R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+movzx W:ax,bp,bx,cx,di,dx,si,sp, R:ah,bh,ch,dh
+movzx W:GPR:32, R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+movzx W:eax,ebp,ebx,ecx,edi,edx,esi,esp, R:ah,bh,ch,dh
+movzx W:GPR:64, R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+movzx W:GPR:32, word ptr R:MEM(16)
+movzx W:GPR:64, word ptr R:MEM(16)
+movzx W:GPR:32, R:GPR:16
+movzx W:GPR:64, R:GPR:16
+mul byte ptr R:MEM(8)
+mul R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+mul R:ah,bh,ch,dh
+mul word ptr R:MEM(16)
+mul R:GPR:16
+neg byte ptr RW:MEM(8)
+neg RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+neg RW:ah,bh,ch,dh
+neg word ptr RW:MEM(16)
+neg RW:GPR:16
+lock neg byte ptr RW:MEM(8)
+lock neg word ptr RW:MEM(16)
+nop word ptr R:MEM(16)
+nop R:GPR:16
+not byte ptr RW:MEM(8)
+not RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+not RW:ah,bh,ch,dh
+not word ptr RW:MEM(16)
+not RW:GPR:16
+lock not byte ptr RW:MEM(8)
+lock not word ptr RW:MEM(16)
+or byte ptr RW:MEM(8), 0x0
+or byte ptr RW:MEM(8), IMM(8)
+or RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, 0x0
+or RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, IMM(8)
+or RW:ah,bh,ch,dh, 0x0
+or RW:ah,bh,ch,dh, IMM(8)
+or word ptr RW:MEM(16), IMM(16)
+or RW:GPR:16, IMM(16)
+or word ptr RW:MEM(16), 0x0
+or word ptr RW:MEM(16), IMM(8)
+or RW:GPR:16, 0x0
+or RW:GPR:16, IMM(8)
+or byte ptr RW:MEM(8), R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+or byte ptr RW:MEM(8), R:ah,bh,ch,dh
+or RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+or RW:ah,bh,ch,dh, R:al,bl,cl,dl
+or RW:al,bl,cl,dl, R:ah,bh,ch,dh
+or RW:ah,bh,ch,dh, R:ah,bh,ch,dh
+or word ptr RW:MEM(16), R:GPR:16
+or RW:GPR:16, R:GPR:16
+or RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, byte ptr R:MEM(8)
+or RW:ah,bh,ch,dh, byte ptr R:MEM(8)
+or RW:GPR:16, word ptr R:MEM(16)
+or RW:al, 0x0
+or RW:al, IMM(8)
+or RW:ax, IMM(16)
+lock or byte ptr RW:MEM(8), 0x0
+lock or byte ptr RW:MEM(8), IMM(8)
+lock or word ptr RW:MEM(16), IMM(16)
+lock or word ptr RW:MEM(16), 0x0
+lock or word ptr RW:MEM(16), IMM(8)
+lock or byte ptr RW:MEM(8), R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+lock or byte ptr RW:MEM(8), R:ah,bh,ch,dh
+lock or word ptr RW:MEM(16), R:GPR:16
+out 0x0, R:al
+out IMM(8), R:al
+out 0x0, R:ax
+out IMM(8), R:ax
+out R:dx, R:al
+out R:dx, R:ax
+out R:dx, R:eax
+pop word ptr W:MEM(16)
+pop W:GPR:16
+pop W:fs
+pop W:gs
+push word ptr R:MEM(16)
+push R:GPR:16
+push R:fs
+push R:gs
+rcl byte ptr RW:MEM(8), 0x0
+rcl byte ptr RW:MEM(8), IMM(8)
+rcl RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, 0x0
+rcl RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, IMM(8)
+rcl RW:ah,bh,ch,dh, 0x0
+rcl RW:ah,bh,ch,dh, IMM(8)
+rcl word ptr RW:MEM(16), 0x0
+rcl word ptr RW:MEM(16), IMM(8)
+rcl RW:GPR:16, 0x0
+rcl RW:GPR:16, IMM(8)
+rcl byte ptr RW:MEM(8)
+rcl RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+rcl RW:ah,bh,ch,dh
+rcl word ptr RW:MEM(16)
+rcl RW:GPR:16
+rcl byte ptr RW:MEM(8), R:cl
+rcl RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, R:cl
+rcl RW:ah,bh,ch,dh, R:cl
+rcl word ptr RW:MEM(16), R:cl
+rcl RW:GPR:16, R:cl
+rcr byte ptr RW:MEM(8), 0x0
+rcr byte ptr RW:MEM(8), IMM(8)
+rcr RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, 0x0
+rcr RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, IMM(8)
+rcr RW:ah,bh,ch,dh, 0x0
+rcr RW:ah,bh,ch,dh, IMM(8)
+rcr word ptr RW:MEM(16), 0x0
+rcr word ptr RW:MEM(16), IMM(8)
+rcr RW:GPR:16, 0x0
+rcr RW:GPR:16, IMM(8)
+rcr byte ptr RW:MEM(8)
+rcr RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+rcr RW:ah,bh,ch,dh
+rcr word ptr RW:MEM(16)
+rcr RW:GPR:16
+rcr byte ptr RW:MEM(8), R:cl
+rcr RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, R:cl
+rcr RW:ah,bh,ch,dh, R:cl
+rcr word ptr RW:MEM(16), R:cl
+rcr RW:GPR:16, R:cl
+rep cmpsb byte ptr R:[rsi], byte ptr R:es:[rdi]
+rep cmpsw word ptr R:[rsi], word ptr R:es:[rdi]
+rep scasb R:al, byte ptr R:es:[rdi]
+rep scasw R:ax, word ptr R:es:[rdi]
+repne cmpsb byte ptr R:[rsi], byte ptr R:es:[rdi]
+repne cmpsw word ptr R:[rsi], word ptr R:es:[rdi]
+repne scasb R:al, byte ptr R:es:[rdi]
+repne scasw R:ax, word ptr R:es:[rdi]
+rep lodsb W:al, byte ptr R:[rsi]
+repne lodsb W:al, byte ptr R:[rsi]
+rep lodsw W:ax, word ptr R:[rsi]
+repne lodsw W:ax, word ptr R:[rsi]
+rep movsb byte ptr W:es:[rdi], byte ptr R:[rsi]
+repne movsb byte ptr W:es:[rdi], byte ptr R:[rsi]
+rep movsw word ptr W:es:[rdi], word ptr R:[rsi]
+repne movsw word ptr W:es:[rdi], word ptr R:[rsi]
+rep stosb byte ptr W:es:[rdi], R:al
+repne stosb byte ptr W:es:[rdi], R:al
+rep stosw word ptr W:es:[rdi], R:ax
+repne stosw word ptr W:es:[rdi], R:ax
+rol byte ptr RW:MEM(8), 0x0
+rol byte ptr RW:MEM(8), IMM(8)
+rol RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, 0x0
+rol RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, IMM(8)
+rol RW:ah,bh,ch,dh, 0x0
+rol RW:ah,bh,ch,dh, IMM(8)
+rol word ptr RW:MEM(16), 0x0
+rol word ptr RW:MEM(16), IMM(8)
+rol RW:GPR:16, 0x0
+rol RW:GPR:16, IMM(8)
+rol byte ptr RW:MEM(8)
+rol RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+rol RW:ah,bh,ch,dh
+rol word ptr RW:MEM(16)
+rol RW:GPR:16
+rol byte ptr RW:MEM(8), R:cl
+rol RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, R:cl
+rol RW:ah,bh,ch,dh, R:cl
+rol word ptr RW:MEM(16), R:cl
+rol RW:GPR:16, R:cl
+ror byte ptr RW:MEM(8), 0x0
+ror byte ptr RW:MEM(8), IMM(8)
+ror RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, 0x0
+ror RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, IMM(8)
+ror RW:ah,bh,ch,dh, 0x0
+ror RW:ah,bh,ch,dh, IMM(8)
+ror RW:GPR:16, 0x0
+ror RW:GPR:16, IMM(8)
+ror word ptr RW:MEM(16), 0x0
+ror word ptr RW:MEM(16), IMM(8)
+ror byte ptr RW:MEM(8)
+ror RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+ror RW:ah,bh,ch,dh
+ror word ptr RW:MEM(16)
+ror RW:GPR:16
+ror byte ptr RW:MEM(8), R:cl
+ror RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, R:cl
+ror RW:ah,bh,ch,dh, R:cl
+ror word ptr RW:MEM(16), R:cl
+ror RW:GPR:16, R:cl
+sar byte ptr RW:MEM(8), 0x0
+sar byte ptr RW:MEM(8), IMM(8)
+sar RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, 0x0
+sar RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, IMM(8)
+sar RW:ah,bh,ch,dh, 0x0
+sar RW:ah,bh,ch,dh, IMM(8)
+sar word ptr RW:MEM(16), 0x0
+sar word ptr RW:MEM(16), IMM(8)
+sar RW:GPR:16, 0x0
+sar RW:GPR:16, IMM(8)
+sar byte ptr RW:MEM(8)
+sar RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+sar RW:ah,bh,ch,dh
+sar word ptr RW:MEM(16)
+sar RW:GPR:16
+sar byte ptr RW:MEM(8), R:cl
+sar RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, R:cl
+sar RW:ah,bh,ch,dh, R:cl
+sar word ptr RW:MEM(16), R:cl
+sar RW:GPR:16, R:cl
+sbb byte ptr RW:MEM(8), 0x0
+sbb byte ptr RW:MEM(8), IMM(8)
+sbb RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, 0x0
+sbb RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, IMM(8)
+sbb RW:ah,bh,ch,dh, 0x0
+sbb RW:ah,bh,ch,dh, IMM(8)
+sbb word ptr RW:MEM(16), IMM(16)
+sbb RW:GPR:16, IMM(16)
+sbb word ptr RW:MEM(16), 0x0
+sbb word ptr RW:MEM(16), IMM(8)
+sbb RW:GPR:16, 0x0
+sbb RW:GPR:16, IMM(8)
+sbb byte ptr RW:MEM(8), R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+sbb byte ptr RW:MEM(8), R:ah,bh,ch,dh
+sbb RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+sbb RW:ah,bh,ch,dh, R:al,bl,cl,dl
+sbb RW:al,bl,cl,dl, R:ah,bh,ch,dh
+sbb RW:ah,bh,ch,dh, R:ah,bh,ch,dh
+sbb word ptr RW:MEM(16), R:GPR:16
+sbb RW:GPR:16, R:GPR:16
+sbb RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, byte ptr R:MEM(8)
+sbb RW:ah,bh,ch,dh, byte ptr R:MEM(8)
+sbb RW:GPR:16, word ptr R:MEM(16)
+sbb RW:al, 0x0
+sbb RW:al, IMM(8)
+sbb RW:ax, IMM(16)
+lock sbb byte ptr RW:MEM(8), 0x0
+lock sbb byte ptr RW:MEM(8), IMM(8)
+lock sbb word ptr RW:MEM(16), IMM(16)
+lock sbb word ptr RW:MEM(16), 0x0
+lock sbb word ptr RW:MEM(16), IMM(8)
+lock sbb byte ptr RW:MEM(8), R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+lock sbb byte ptr RW:MEM(8), R:ah,bh,ch,dh
+lock sbb word ptr RW:MEM(16), R:GPR:16
+scasb R:al, byte ptr R:es:[rdi]
+scasw R:ax, word ptr R:es:[rdi]
+setb byte ptr W:MEM(8)
+setb W:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+setb W:ah,bh,ch,dh
+setbe byte ptr W:MEM(8)
+setbe W:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+setbe W:ah,bh,ch,dh
+setl byte ptr W:MEM(8)
+setl W:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+setl W:ah,bh,ch,dh
+setle byte ptr W:MEM(8)
+setle W:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+setle W:ah,bh,ch,dh
+setae byte ptr W:MEM(8)
+setae W:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+setae W:ah,bh,ch,dh
+seta byte ptr W:MEM(8)
+seta W:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+seta W:ah,bh,ch,dh
+setge byte ptr W:MEM(8)
+setge W:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+setge W:ah,bh,ch,dh
+setg byte ptr W:MEM(8)
+setg W:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+setg W:ah,bh,ch,dh
+setno byte ptr W:MEM(8)
+setno W:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+setno W:ah,bh,ch,dh
+setnp byte ptr W:MEM(8)
+setnp W:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+setnp W:ah,bh,ch,dh
+setns byte ptr W:MEM(8)
+setns W:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+setns W:ah,bh,ch,dh
+setne byte ptr W:MEM(8)
+setne W:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+setne W:ah,bh,ch,dh
+seto byte ptr W:MEM(8)
+seto W:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+seto W:ah,bh,ch,dh
+setp byte ptr W:MEM(8)
+setp W:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+setp W:ah,bh,ch,dh
+sets byte ptr W:MEM(8)
+sets W:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+sets W:ah,bh,ch,dh
+sete byte ptr W:MEM(8)
+sete W:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+sete W:ah,bh,ch,dh
+shl byte ptr RW:MEM(8), 0x0
+shl byte ptr RW:MEM(8), IMM(8)
+shl RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, 0x0
+shl RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, IMM(8)
+shl RW:ah,bh,ch,dh, 0x0
+shl RW:ah,bh,ch,dh, IMM(8)
+shl word ptr RW:MEM(16), 0x0
+shl word ptr RW:MEM(16), IMM(8)
+shl RW:GPR:16, 0x0
+shl RW:GPR:16, IMM(8)
+shl byte ptr RW:MEM(8)
+shl RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+shl RW:ah,bh,ch,dh
+shl word ptr RW:MEM(16)
+shl RW:GPR:16
+shl byte ptr RW:MEM(8), R:cl
+shl RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, R:cl
+shl RW:ah,bh,ch,dh, R:cl
+shl word ptr RW:MEM(16), R:cl
+shl RW:GPR:16, R:cl
+shld word ptr RW:MEM(16), R:GPR:16, 0x0
+shld word ptr RW:MEM(16), R:GPR:16, IMM(8)
+shld RW:GPR:16, R:GPR:16, 0x0
+shld RW:GPR:16, R:GPR:16, IMM(8)
+shld word ptr RW:MEM(16), R:GPR:16, R:cl
+shld RW:GPR:16, R:GPR:16, R:cl
+shr byte ptr RW:MEM(8), 0x0
+shr byte ptr RW:MEM(8), IMM(8)
+shr RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, 0x0
+shr RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, IMM(8)
+shr RW:ah,bh,ch,dh, 0x0
+shr RW:ah,bh,ch,dh, IMM(8)
+shr word ptr RW:MEM(16), 0x0
+shr word ptr RW:MEM(16), IMM(8)
+shr RW:GPR:16, 0x0
+shr RW:GPR:16, IMM(8)
+shr byte ptr RW:MEM(8)
+shr RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+shr RW:ah,bh,ch,dh
+shr word ptr RW:MEM(16)
+shr RW:GPR:16
+shr byte ptr RW:MEM(8), R:cl
+shr RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, R:cl
+shr RW:ah,bh,ch,dh, R:cl
+shr word ptr RW:MEM(16), R:cl
+shr RW:GPR:16, R:cl
+shrd word ptr RW:MEM(16), R:GPR:16, 0x0
+shrd word ptr RW:MEM(16), R:GPR:16, IMM(8)
+shrd RW:GPR:16, R:GPR:16, 0x0
+shrd RW:GPR:16, R:GPR:16, IMM(8)
+shrd word ptr RW:MEM(16), R:GPR:16, R:cl
+shrd RW:GPR:16, R:GPR:16, R:cl
+stosb byte ptr W:es:[rdi], R:al
+stosw word ptr W:es:[rdi], R:ax
+sub byte ptr RW:MEM(8), 0x0
+sub byte ptr RW:MEM(8), IMM(8)
+sub RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, 0x0
+sub RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, IMM(8)
+sub RW:ah,bh,ch,dh, 0x0
+sub RW:ah,bh,ch,dh, IMM(8)
+sub word ptr RW:MEM(16), IMM(16)
+sub RW:GPR:16, IMM(16)
+sub word ptr RW:MEM(16), 0x0
+sub word ptr RW:MEM(16), IMM(8)
+sub RW:GPR:16, 0x0
+sub RW:GPR:16, IMM(8)
+sub byte ptr RW:MEM(8), R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+sub byte ptr RW:MEM(8), R:ah,bh,ch,dh
+sub RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+sub RW:ah,bh,ch,dh, R:al,bl,cl,dl
+sub RW:al,bl,cl,dl, R:ah,bh,ch,dh
+sub RW:ah,bh,ch,dh, R:ah,bh,ch,dh
+sub word ptr RW:MEM(16), R:GPR:16
+sub RW:GPR:16, R:GPR:16
+sub RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, byte ptr R:MEM(8)
+sub RW:ah,bh,ch,dh, byte ptr R:MEM(8)
+sub RW:GPR:16, word ptr R:MEM(16)
+sub RW:al, 0x0
+sub RW:al, IMM(8)
+sub RW:ax, IMM(16)
+lock sub byte ptr RW:MEM(8), 0x0
+lock sub byte ptr RW:MEM(8), IMM(8)
+lock sub word ptr RW:MEM(16), IMM(16)
+lock sub word ptr RW:MEM(16), 0x0
+lock sub word ptr RW:MEM(16), IMM(8)
+lock sub byte ptr RW:MEM(8), R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+lock sub byte ptr RW:MEM(8), R:ah,bh,ch,dh
+lock sub word ptr RW:MEM(16), R:GPR:16
+test byte ptr R:MEM(8), 0x0
+test byte ptr R:MEM(8), IMM(8)
+test R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, 0x0
+test R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, IMM(8)
+test R:ah,bh,ch,dh, 0x0
+test R:ah,bh,ch,dh, IMM(8)
+test word ptr R:MEM(16), IMM(16)
+test R:GPR:16, IMM(16)
+test byte ptr R:MEM(8), R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+test byte ptr R:MEM(8), R:ah,bh,ch,dh
+test R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+test R:ah,bh,ch,dh, R:al,bl,cl,dl
+test R:al,bl,cl,dl, R:ah,bh,ch,dh
+test R:ah,bh,ch,dh, R:ah,bh,ch,dh
+test word ptr R:MEM(16), R:GPR:16
+test R:GPR:16, R:GPR:16
+test R:al, 0x0
+test R:al, IMM(8)
+test R:ax, IMM(16)
+xadd byte ptr RW:MEM(8), RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+xadd byte ptr RW:MEM(8), RW:ah,bh,ch,dh
+xadd RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+xadd RW:ah,bh,ch,dh, RW:al,bl,cl,dl
+xadd RW:al,bl,cl,dl, RW:ah,bh,ch,dh
+xadd RW:ah,bh,ch,dh, RW:ah,bh,ch,dh
+xadd word ptr RW:MEM(16), RW:GPR:16
+xadd RW:GPR:16, RW:GPR:16
+lock xadd byte ptr RW:MEM(8), RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+lock xadd byte ptr RW:MEM(8), RW:ah,bh,ch,dh
+lock xadd word ptr RW:MEM(16), RW:GPR:16
+xchg byte ptr RW:MEM(8), RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+xchg byte ptr RW:MEM(8), RW:ah,bh,ch,dh
+xchg RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+xchg RW:ah,bh,ch,dh, RW:al,bl,cl,dl
+xchg RW:al,bl,cl,dl, RW:ah,bh,ch,dh
+xchg RW:ah,bh,ch,dh, RW:ah,bh,ch,dh
+xchg word ptr RW:MEM(16), RW:GPR:16
+xchg RW:GPR:16, RW:GPR:16
+xchg RW:ax, RW:GPR:16
+xor byte ptr RW:MEM(8), 0x0
+xor byte ptr RW:MEM(8), IMM(8)
+xor RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, 0x0
+xor RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, IMM(8)
+xor RW:ah,bh,ch,dh, 0x0
+xor RW:ah,bh,ch,dh, IMM(8)
+xor word ptr RW:MEM(16), IMM(16)
+xor RW:GPR:16, IMM(16)
+xor word ptr RW:MEM(16), 0x0
+xor word ptr RW:MEM(16), IMM(8)
+xor RW:GPR:16, 0x0
+xor RW:GPR:16, IMM(8)
+xor byte ptr RW:MEM(8), R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+xor byte ptr RW:MEM(8), R:ah,bh,ch,dh
+xor RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+xor RW:ah,bh,ch,dh, R:al,bl,cl,dl
+xor RW:al,bl,cl,dl, R:ah,bh,ch,dh
+xor RW:ah,bh,ch,dh, R:ah,bh,ch,dh
+xor word ptr RW:MEM(16), R:GPR:16
+xor RW:GPR:16, R:GPR:16
+xor RW:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl, byte ptr R:MEM(8)
+xor RW:ah,bh,ch,dh, byte ptr R:MEM(8)
+xor RW:GPR:16, word ptr R:MEM(16)
+xor RW:al, 0x0
+xor RW:al, IMM(8)
+xor RW:ax, IMM(16)
+lock xor byte ptr RW:MEM(8), 0x0
+lock xor byte ptr RW:MEM(8), IMM(8)
+lock xor word ptr RW:MEM(16), IMM(16)
+lock xor word ptr RW:MEM(16), 0x0
+lock xor word ptr RW:MEM(16), IMM(8)
+lock xor byte ptr RW:MEM(8), R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+lock xor byte ptr RW:MEM(8), R:ah,bh,ch,dh
+lock xor word ptr RW:MEM(16), R:GPR:16
+tzcnt W:GPR:16, word ptr R:MEM(16)
+tzcnt W:GPR:16, R:GPR:16
+lzcnt W:GPR:16, word ptr R:MEM(16)
+lzcnt W:GPR:16, R:GPR:16
+movbe W:GPR:16, word ptr R:MEM(16)
+movbe word ptr W:MEM(16), R:GPR:16
+prefetchwt1 byte ptr R:MEM(8)
+rdrand W:GPR:16
+rdseed W:GPR:16
+pinsrw RW:XMM0..15, word ptr R:MEM(16), IMM(8)
+crc32 RW:GPR:32, byte ptr R:MEM(8)
+crc32 RW:GPR:64, byte ptr R:MEM(8)
+crc32 RW:GPR:32, R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+crc32 RW:eax,ebp,ebx,ecx,edi,edx,esi,esp, R:ah,bh,ch,dh
+crc32 RW:GPR:64, R:al,bl,bpl,cl,dil,dl,r10b,r11b,r12b,r13b,r14b,r15b,r8b,r9b,sil,spl
+crc32 RW:GPR:32, word ptr R:MEM(16)
+crc32 RW:GPR:32, R:GPR:16
+pextrb byte ptr W:MEM(8), R:XMM0..15, IMM(8)
+pextrw word ptr W:MEM(16), R:XMM0..15, IMM(8)
+pinsrb RW:XMM0..15, byte ptr R:MEM(8), IMM(8)
+pmovsxbq W:XMM0..15, word ptr R:MEM(16)
+pmovzxbq W:XMM0..15, word ptr R:MEM(16)
+popcnt W:GPR:16, word ptr R:MEM(16)
+popcnt W:GPR:16, R:GPR:16

@@ -1,0 +1,234 @@
+{
+  "config": {
+      "insn_feature_manager": {
+          "features": [
+              ["exact_scheme", "singleton"],
+              ["mnemonic", ["editdistance", 3]],
+              ["opschemes", "subset"],
+              ["memory_usage", "subset_or_definitely_not"],
+              ["uops_on_SKL", ["log_ub", 5]],
+              ["category", "singleton"],
+              ["extension", "singleton"],
+              ["isa-set", "singleton"],
+              ["has_lock", "singleton"],
+              ["has_rep", "singleton"]
+            ],
+          "features.doc": "An ordered list of tuples containing the names of features and the kind of abstraction to use for it. The order affects the index lookup order and as a consequence the run time."
+        },
+      "iwho": {
+          "context_specifier": "x86_uops_info",
+          "context_specifier.doc": "identifier for the IWHO context to use",
+          "filters": [
+              {"kind": "no_cf"},
+              {"kind": "with_measurements", "archs": ["SKL"]},
+              {
+                "kind": "blacklist",
+                "file_path": "./filter_files/filter_01_filter_memwrite_rep_lock.csv"
+              },
+              {
+                "kind": "blacklist",
+                "file_path": "./filter_files/filter_02_error_schemes_llvm-mca.13.Zen+.csv"
+              },
+              {
+                "kind": "blacklist",
+                "file_path": "./filter_files/filter_03_error_schemes_nanobench.Zen+.csv"
+              }
+            ],
+          "filters.doc": "a list of filters to restrict the InsnSchemes used for sampling."
+        },
+      "interestingness_metric": {
+          "min_interestingness": 2.0,
+          "min_interestingness.doc": "the interestingness of an experiment must be at least that high to be considered interesting",
+          "mostly_interesting_ratio": 1.0,
+          "mostly_interesting_ratio.doc": "at least this ratio of a batch of experiments must be interesting for it to be considered mostly interesting.",
+          "invert_interestingness": false,
+          "invert_interestingness.doc": "if this is true, consider exactly those cases interesting that would not be interesting with the other settings.",
+          "use_absolute_difference": true,
+          "use_absolute_difference.doc": "if true, consider bbs interesiting iff the absolute difference between the results exceeds the min_interestingness value."
+        },
+      "discovery": {
+          "discovery_batch_size": 50,
+          "discovery_batch_size.doc": "the number of basic blocks to sample at a time when looking for new interesting blocks",
+          "discovery_possible_block_lengths": [1, 2, 3],
+          "discovery_possible_block_lengths.doc": "the different options for allowed block lengths for sampling. Duplicates are possible and increase the likelyhood.",
+          "generalization_batch_size": 50,
+          "generalization_batch_size.doc": "the number of basic blocks to sample when validating that an abstract block is still interesting",
+          "generalization_strategy": [["random", 5]],
+          "generalization_strategy.doc": "the strategy to use for selecting expansions during generalization. This should be a list of [\"<strategy>\", <N>] pairs, where each strategy is tried N times (with a different random state). Strategy options are: \"random\", \"max_benefit\""
+        },
+      "sampling": {
+          "wrap_in_loop": false,
+          "wrap_in_loop.doc": "if true, enclose the sampled basic blocks with a simple loop before using them if possible (It wouldn't be possible if the predictor does not support this, as is the case e.g. with measuring predictors like nanoBench.)"
+        },
+      "measurement_db": {
+          "db_path": "./measurements.db",
+          "db_path.doc": "path and file name of the sqlite3 database to use"
+        },
+      "predmanager": {
+          "registry_path": "../../configs/predictors/pred_registry.json",
+          "registry_path.doc": "path to a predictor registry in json format",
+          "num_processes": 0,
+          "num_processes.doc": "number of predictor processes to use. A value <= 0 uses the number of available cores, None/null runs everything in the main process."
+        }
+    },
+  "trace": {
+      "start": {
+          "abs_insns": [
+              {
+                "exact_scheme": "$InsnScheme:haddpd RW:XMM0..15, R:XMM0..15",
+                "mnemonic": {"top": false, "base": "haddpd", "curr_dist": 0, "max_dist": 3},
+                "opschemes": ["R:XMM0..15", "RW:XMM0..15"],
+                "memory_usage": {"subfeature": [], "is_in_subfeature": false},
+                "uops_on_SKL": {"val": 2, "max_ub": 5},
+                "category": "SSE",
+                "extension": "SSE3",
+                "isa-set": "SSE3",
+                "has_lock": false,
+                "has_rep": false
+              }
+            ],
+          "abs_aliasing": {
+              "aliasing_dict": [[[[0, ["$OperandKind:1", "reg0"]], [0, ["$OperandKind:1", "reg1"]]], false]],
+              "is_bot": false
+            }
+        },
+      "trace": [
+          {
+            "expansion": [0, 0, ["exact_scheme", "$SV:TOP"]],
+            "taken": true,
+            "terminate": false,
+            "comment": null,
+            "measurements": null
+          },
+          {
+            "expansion": [
+                1,
+                [[[0, ["$OperandKind:1", "reg0"]], [0, ["$OperandKind:1", "reg1"]]], "$SV:TOP"]
+              ],
+            "taken": true,
+            "terminate": false,
+            "comment": null,
+            "measurements": 2
+          },
+          {
+            "expansion": [0, 0, ["opschemes", "RW:XMM0..15"]],
+            "taken": true,
+            "terminate": false,
+            "comment": null,
+            "measurements": null
+          },
+          {
+            "expansion": [0, 0, ["opschemes", "R:XMM0..15"]],
+            "taken": true,
+            "terminate": false,
+            "comment": null,
+            "measurements": null
+          },
+          {
+            "expansion": [0, 0, ["memory_usage", "$SV:TOP"]],
+            "taken": true,
+            "terminate": false,
+            "comment": null,
+            "measurements": 3
+          },
+          {
+            "expansion": [0, 0, ["isa-set", "$SV:TOP"]],
+            "taken": true,
+            "terminate": false,
+            "comment": null,
+            "measurements": null
+          },
+          {
+            "expansion": [0, 0, ["has_lock", "$SV:TOP"]],
+            "taken": true,
+            "terminate": false,
+            "comment": null,
+            "measurements": null
+          },
+          {
+            "expansion": [0, 0, ["mnemonic", 1]],
+            "taken": true,
+            "terminate": false,
+            "comment": null,
+            "measurements": 4
+          },
+          {
+            "expansion": [0, 0, ["uops_on_SKL", 3]],
+            "taken": true,
+            "terminate": false,
+            "comment": null,
+            "measurements": null
+          },
+          {
+            "expansion": [0, 0, ["mnemonic", 2]],
+            "taken": true,
+            "terminate": false,
+            "comment": null,
+            "measurements": null
+          },
+          {
+            "expansion": [0, 0, ["mnemonic", 3]],
+            "taken": true,
+            "terminate": false,
+            "comment": null,
+            "measurements": 5
+          },
+          {
+            "expansion": [0, 0, ["extension", "$SV:TOP"]],
+            "taken": false,
+            "terminate": false,
+            "comment": null,
+            "measurements": 6
+          },
+          {
+            "expansion": [0, 0, ["uops_on_SKL", 4]],
+            "taken": true,
+            "terminate": false,
+            "comment": null,
+            "measurements": null
+          },
+          {
+            "expansion": [0, 0, ["mnemonic", 4]],
+            "taken": false,
+            "terminate": false,
+            "comment": null,
+            "measurements": 7
+          },
+          {
+            "expansion": [0, 0, ["has_rep", "$SV:TOP"]],
+            "taken": true,
+            "terminate": false,
+            "comment": null,
+            "measurements": null
+          },
+          {
+            "expansion": [0, 0, ["uops_on_SKL", 5]],
+            "taken": true,
+            "terminate": false,
+            "comment": null,
+            "measurements": null
+          },
+          {
+            "expansion": [0, 0, ["category", "$SV:TOP"]],
+            "taken": true,
+            "terminate": false,
+            "comment": null,
+            "measurements": null
+          },
+          {
+            "expansion": [0, 0, ["uops_on_SKL", "$SV:TOP"]],
+            "taken": true,
+            "terminate": false,
+            "comment": null,
+            "measurements": null
+          },
+          {
+            "expansion": null,
+            "taken": false,
+            "terminate": true,
+            "comment": "No more expansions remain.",
+            "measurements": null
+          }
+        ]
+    }
+}

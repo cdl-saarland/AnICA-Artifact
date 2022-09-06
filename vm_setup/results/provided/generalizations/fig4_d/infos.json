@@ -1,0 +1,7 @@
+{
+  "identifier": "Fig4.D",
+  "predictors": [
+    "llvm-mca.12-r+a.hsw"
+  ],
+  "witness_len": 28
+}

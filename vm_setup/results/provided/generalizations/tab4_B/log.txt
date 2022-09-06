@@ -1,0 +1,47 @@
+  generalizing BB:    AbstractInsns:
+       0:
+        exact_scheme: shld RW:GPR:64, R:GPR:64, R:cl
+        mnemonic: 'shld' + at most 0 edits
+        opschemes: {R:GPR:64, R:cl, RW:GPR:64, W:flag_af, W:flag_of}
+        memory_usage: definitely not
+        uops_on_SKL: at most 7
+        category: SHIFT
+        extension: BASE
+        isa-set: I386
+        has_lock: False
+        has_rep: False
+    Aliasing:
+      0:(E, 'reg0') - 0:(E, 'reg1') : must not alias
+      0:(E, 'reg0') - 0:(E, 'reg2') : must not alias
+      0:(E, 'reg1') - 0:(E, 'reg2') : must not alias
+  the chosen expansion (0, 0, ('exact_scheme', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  evaluating samples for expanding (0, 0, ('mnemonic', 1)) (benefit: 2.0)
+  samples for expanding (0, 0, ('mnemonic', 1)) are interesting, adjusting BB
+  evaluating samples for expanding (0, 0, ('opschemes', 'R:cl')) (benefit: 2.0)
+  samples for expanding (0, 0, ('opschemes', 'R:cl')) are not interesting, discarding
+  the chosen expansion (0, 0, ('mnemonic', 2)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 0, ('mnemonic', 3)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 0, ('mnemonic', 4)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 0, ('opschemes', 'W:flag_af')) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 0, ('opschemes', 'R:GPR:64')) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  evaluating samples for expanding (0, 0, ('opschemes', 'RW:GPR:64')) (benefit: 3.0)
+  samples for expanding (0, 0, ('opschemes', 'RW:GPR:64')) are interesting, adjusting BB
+  evaluating samples for expanding (0, 0, ('isa-set', <SpecialValue.TOP: 1>)) (benefit: 3.5)
+  samples for expanding (0, 0, ('isa-set', <SpecialValue.TOP: 1>)) are not interesting, discarding
+  the chosen expansion (0, 0, ('opschemes', 'W:flag_of')) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 0, ('memory_usage', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 0, ('uops_on_SKL', 4)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 0, ('uops_on_SKL', 5)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 0, ('uops_on_SKL', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 0, ('category', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 0, ('extension', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 0, ('has_lock', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 0, ('has_rep', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  evaluating samples for expanding (1, (((0, (E, 'reg0')), (0, (E, 'reg1'))), <SpecialValue.TOP: 1>)) (benefit: 0)
+  samples for expanding (1, (((0, (E, 'reg0')), (0, (E, 'reg1'))), <SpecialValue.TOP: 1>)) are interesting, adjusting BB
+  evaluating samples for expanding (1, (((0, (E, 'reg0')), (0, (E, 'reg2'))), <SpecialValue.TOP: 1>)) (benefit: 0)
+  samples for expanding (1, (((0, (E, 'reg0')), (0, (E, 'reg2'))), <SpecialValue.TOP: 1>)) are interesting, adjusting BB
+  evaluating samples for expanding (1, (((0, (E, 'reg1')), (0, (E, 'reg2'))), <SpecialValue.TOP: 1>)) (benefit: 0)
+  samples for expanding (1, (((0, (E, 'reg1')), (0, (E, 'reg2'))), <SpecialValue.TOP: 1>)) are interesting, adjusting BB
+  no more component left for expansion
+  generalization done.

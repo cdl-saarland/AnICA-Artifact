@@ -1,0 +1,8 @@
+{
+  "identifier": "Fig4.A.DiffTune",
+  "predictors": [
+    "llvm-mca.13-r+a.hsw",
+    "difftune.artifact.hsw"
+  ],
+  "witness_len": 25
+}

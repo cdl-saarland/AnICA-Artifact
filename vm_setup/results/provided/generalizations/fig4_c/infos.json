@@ -1,0 +1,8 @@
+{
+  "identifier": "Fig4.C",
+  "predictors": [
+    "uica.hsw",
+    "ithemal.bhive.hsw"
+  ],
+  "witness_len": 51
+}

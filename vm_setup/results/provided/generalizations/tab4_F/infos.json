@@ -1,0 +1,8 @@
+{
+  "identifier": "Tab4.F",
+  "predictors": [
+    "llvm-mca.13.Zen+",
+    "nanobench.Zen+"
+  ],
+  "witness_len": 41
+}

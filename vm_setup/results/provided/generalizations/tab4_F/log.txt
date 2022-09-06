@@ -1,0 +1,84 @@
+  generalizing BB:    AbstractInsns:
+       0:
+        exact_scheme: shl RW:GPR:32, 0x0
+        mnemonic: 'shl' + at most 0 edits
+        opschemes: {0x0, RW:GPR:32}
+        memory_usage: definitely not
+        uops_on_SKL: at most 1
+        category: SHIFT
+        extension: BASE
+        isa-set: I186
+        has_lock: False
+        has_rep: False
+       1:
+        exact_scheme: cmovge W:GPR:32, R:GPR:32
+        mnemonic: 'cmovge' + at most 0 edits
+        opschemes: {R:GPR:32, R:flag_of, R:flag_sf, W:GPR:32}
+        memory_usage: definitely not
+        uops_on_SKL: at most 1
+        category: CMOV
+        extension: BASE
+        isa-set: CMOV
+        has_lock: False
+        has_rep: False
+    Aliasing:
+      0:(E, 'reg0') - 1:(E, 'reg0') : must not alias
+      0:(E, 'reg0') - 1:(E, 'reg1') : must not alias
+      1:(E, 'reg0') - 1:(E, 'reg1') : must not alias
+  evaluating samples for expanding (1, (((0, (E, 'reg0')), (1, (E, 'reg0'))), <SpecialValue.TOP: 1>)) (benefit: 0)
+  samples for expanding (1, (((0, (E, 'reg0')), (1, (E, 'reg0'))), <SpecialValue.TOP: 1>)) are interesting, adjusting BB
+  evaluating samples for expanding (1, (((1, (E, 'reg0')), (1, (E, 'reg1'))), <SpecialValue.TOP: 1>)) (benefit: 0)
+  samples for expanding (1, (((1, (E, 'reg0')), (1, (E, 'reg1'))), <SpecialValue.TOP: 1>)) are interesting, adjusting BB
+  evaluating samples for expanding (1, (((0, (E, 'reg0')), (1, (E, 'reg1'))), <SpecialValue.TOP: 1>)) (benefit: 0)
+  samples for expanding (1, (((0, (E, 'reg0')), (1, (E, 'reg1'))), <SpecialValue.TOP: 1>)) are interesting, adjusting BB
+  the chosen expansion (0, 0, ('exact_scheme', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  evaluating samples for expanding (0, 0, ('mnemonic', 1)) (benefit: 2.0)
+  samples for expanding (0, 0, ('mnemonic', 1)) are interesting, adjusting BB
+  the chosen expansion (0, 1, ('exact_scheme', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 1, ('has_rep', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  evaluating samples for expanding (0, 0, ('mnemonic', 2)) (benefit: 1.5)
+  samples for expanding (0, 0, ('mnemonic', 2)) are interesting, adjusting BB
+  the chosen expansion (0, 1, ('opschemes', 'R:flag_sf')) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 0, ('memory_usage', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 1, ('extension', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  evaluating samples for expanding (0, 0, ('category', <SpecialValue.TOP: 1>)) (benefit: 1.3333333333333333)
+  samples for expanding (0, 0, ('category', <SpecialValue.TOP: 1>)) are interesting, adjusting BB
+  evaluating samples for expanding (0, 0, ('opschemes', 'RW:GPR:32')) (benefit: 5.0)
+  samples for expanding (0, 0, ('opschemes', 'RW:GPR:32')) are interesting, adjusting BB
+  the chosen expansion (0, 0, ('has_rep', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 1, ('uops_on_SKL', 2)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 0, ('extension', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  evaluating samples for expanding (0, 0, ('opschemes', '0x0')) (benefit: 2.0)
+  samples for expanding (0, 0, ('opschemes', '0x0')) are not interesting, discarding
+  the chosen expansion (0, 1, ('category', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  evaluating samples for expanding (0, 1, ('mnemonic', 1)) (benefit: 3.0)
+  samples for expanding (0, 1, ('mnemonic', 1)) are interesting, adjusting BB
+  evaluating samples for expanding (0, 0, ('isa-set', <SpecialValue.TOP: 1>)) (benefit: 1.9)
+  samples for expanding (0, 0, ('isa-set', <SpecialValue.TOP: 1>)) are not interesting, discarding
+  the chosen expansion (0, 1, ('memory_usage', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 1, ('uops_on_SKL', 3)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  evaluating samples for expanding (0, 1, ('mnemonic', 2)) (benefit: 2.0)
+  samples for expanding (0, 1, ('mnemonic', 2)) are interesting, adjusting BB
+  the chosen expansion (0, 1, ('opschemes', 'W:GPR:32')) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 0, ('uops_on_SKL', 2)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 1, ('uops_on_SKL', 4)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 1, ('mnemonic', 3)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 1, ('has_lock', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 1, ('mnemonic', 4)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 0, ('has_lock', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  evaluating samples for expanding (0, 0, ('uops_on_SKL', 3)) (benefit: 1.25)
+  samples for expanding (0, 0, ('uops_on_SKL', 3)) are interesting, adjusting BB
+  the chosen expansion (0, 0, ('uops_on_SKL', 4)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 0, ('uops_on_SKL', 5)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 1, ('isa-set', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  evaluating samples for expanding (0, 1, ('opschemes', 'R:GPR:32')) (benefit: 8.166666666666666)
+  samples for expanding (0, 1, ('opschemes', 'R:GPR:32')) are interesting, adjusting BB
+  evaluating samples for expanding (0, 1, ('opschemes', 'R:flag_of')) (benefit: 51.734693877551024)
+  samples for expanding (0, 1, ('opschemes', 'R:flag_of')) are not interesting, discarding
+  evaluating samples for expanding (0, 0, ('mnemonic', 3)) (benefit: 1.68)
+  samples for expanding (0, 0, ('mnemonic', 3)) are not interesting, discarding
+  the chosen expansion (0, 1, ('uops_on_SKL', 5)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 0, ('uops_on_SKL', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  the chosen expansion (0, 1, ('uops_on_SKL', <SpecialValue.TOP: 1>)) (benefit: 1.0) cannot change the represented basic blocks, skipping interestingness evaluation
+  no more component left for expansion
+  generalization done.

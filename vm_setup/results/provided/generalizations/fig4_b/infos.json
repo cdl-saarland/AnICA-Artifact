@@ -1,0 +1,8 @@
+{
+  "identifier": "Fig4.B",
+  "predictors": [
+    "iaca.hsw",
+    "uica.hsw"
+  ],
+  "witness_len": 25
+}
