@@ -60,9 +60,9 @@ source ./env/anica_ui/bin/activate
 echo "source /home/vagrant/anica_ui/env/anica_ui/bin/activate" >> $VAGRANT_HOME/.bashrc
 
 
-# build the uops.info scheme description
-cd lib/anica/lib/iwho/
-./build_schemes.sh
+# # build the uops.info scheme description
+# cd lib/anica/lib/iwho/
+# ./build_schemes.sh
 cd $VAGRANT_HOME
 
 # the predictor registry is an installation-dependent configuration file with
