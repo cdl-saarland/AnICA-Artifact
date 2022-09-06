@@ -17,6 +17,11 @@ and also Virtual Box as available here:
 Depending on your hardware platform, it might be necessary to enable
 virtualization options in your system's BIOS to use virtual box.
 
+First, fetch all the code and data:
+```
+./make_vm.sh
+```
+
 Use the following command to build the VM:
 ```
 cd vm_setup
