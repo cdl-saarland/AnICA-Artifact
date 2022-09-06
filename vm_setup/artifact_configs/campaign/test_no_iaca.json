@@ -1,0 +1,27 @@
+[
+    {
+        "abstraction_config_path": "../abstraction/quick.json",
+        "TEMPLATE:all_predictor_pairs": [
+            "llvm-mca.13-r+a.hsw",
+            "uica.hsw",
+            "osaca.0.4.6.hsw",
+            "difftune.artifact.hsw",
+            "ithemal.bhive.hsw"
+        ],
+        "restrict_to_supported_insns": true,
+        "termination": {
+            "num_discoveries": 3,
+            "num_batches": 10
+        }
+    },
+    {
+        "abstraction_config_path": "../abstraction/quick.json",
+        "predictors": ["llvm-mca.13-r+a.hsw", "llvm-mca.9-r+a.hsw"],
+        "restrict_to_supported_insns": true,
+        "termination": {
+            "num_discoveries": 3,
+            "num_batches": 10
+        }
+    }
+]
+

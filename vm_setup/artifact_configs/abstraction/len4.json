@@ -1,0 +1,14 @@
+{
+  "iwho": {
+    "context_specifier": "x86_uops_info",
+    "filters": [ {"kind": "no_cf"}, {"kind": "with_measurements", "archs": ["SKL"]} ]
+  },
+  "discovery": {
+    "discovery_possible_block_lengths": [4]
+  },
+  "measurement_db": null,
+  "predmanager": {
+    "registry_path": "../predictors/pred_registry.json",
+    "num_processes": 0
+  }
+}

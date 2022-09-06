@@ -1,0 +1,14 @@
+.vagrant
+
+vm_setup/anica_ui
+
+vm_setup/results/provided/*.tgz
+
+*.so
+*.o
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+.python-version

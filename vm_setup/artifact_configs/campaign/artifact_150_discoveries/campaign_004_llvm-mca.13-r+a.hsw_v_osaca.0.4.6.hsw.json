@@ -1,0 +1,8 @@
+[
+{
+  "abstraction_config_path": "../../abstraction/quick.json",
+  "restrict_to_supported_insns": true,
+  "termination": {"num_discoveries": 150},
+  "predictors": ["llvm-mca.13-r+a.hsw", "osaca.0.4.6.hsw"]
+}
+]

@@ -1,0 +1,27 @@
+
+{
+"iaca.skl": {
+    "tool": "iaca",
+    "version": "v3.0-28-g1ba2cbb",
+    "uarch": "SKL",
+    "unsupported_insns_path": "./filters/error_schemes_{KEY}.csv",
+    "config": {
+            "kind": "iaca",
+            "iaca_path": "/vagrant/predictors/iaca/iaca",
+            "iaca_opts": ["-arch", "SKL"],
+            "timeout": 5.0
+        }
+},
+"iaca.hsw": {
+    "tool": "iaca",
+    "version": "v3.0-28-g1ba2cbb",
+    "uarch": "HSW",
+    "unsupported_insns_path": "./filters/error_schemes_{KEY}.csv",
+    "config": {
+            "kind": "iaca",
+            "iaca_path": "/vagrant/predictors/iaca/iaca",
+            "iaca_opts": ["-arch", "HSW"],
+            "timeout": 5.0
+        }
+}
+}

@@ -1,0 +1,13 @@
+[Unit]
+Description=Auto start script for the artifact servers
+
+Requires=docker.service
+Wants=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/vagrant/setup/restart_services.sh
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
